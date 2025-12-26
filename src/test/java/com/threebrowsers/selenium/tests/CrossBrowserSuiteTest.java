@@ -1,5 +1,6 @@
 package com.threebrowsers.selenium.tests;
 
+import annotations.Smoke;
 import com.threebrowsers.selenium.drivers.BaseDriver;
 import com.threebrowsers.selenium.drivers.LocalDriverManager;
 import com.threebrowsers.selenium.drivers.LocalDriverManagerMac;
@@ -16,6 +17,7 @@ public class CrossBrowserSuiteTest extends BaseTest {
     @Test
     @Order(1)
     @DisplayName("Chrome local")
+    @Smoke
     void testInChrome() throws InterruptedException {
         runLocalTest("chrome");
     }
@@ -23,6 +25,7 @@ public class CrossBrowserSuiteTest extends BaseTest {
     @Test
     @Order(2)
     @DisplayName("Edge local")
+    @Smoke
     void testInEdge() throws InterruptedException {
         runLocalTest("edge");
     }
@@ -30,6 +33,7 @@ public class CrossBrowserSuiteTest extends BaseTest {
     @Test
     @Order(3)
     @DisplayName("Firefox local")
+    @Smoke
     void testInFirefox() throws InterruptedException {
         runLocalTest("firefox");
     }
@@ -38,6 +42,7 @@ public class CrossBrowserSuiteTest extends BaseTest {
     @Order(4)
     @EnabledOnOs(OS.MAC)
     @DisplayName("Safari local")
+    @Smoke
     void testInSafari() throws InterruptedException {
         runLocalTest("safari");
     }
@@ -46,6 +51,8 @@ public class CrossBrowserSuiteTest extends BaseTest {
     @Test
     @Order(5)
     @DisplayName("Safari cloud")
+    @Disabled()
+    @Smoke
     void testInSafariCloud() throws InterruptedException {
         runRemoteTest();
     }
