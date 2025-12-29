@@ -1,11 +1,10 @@
 package com.threebrowsers.selenium.steps;
 
-import com.threebrowsers.selenium.pages.*;
-import org.openqa.selenium.WebDriver;
-import com.threebrowsers.selenium.images.ScreenshotUtil;
 import com.aventstack.extentreports.ExtentTest;
-
-import java.util.Set;
+import com.threebrowsers.selenium.images.ScreenshotUtil;
+import com.threebrowsers.selenium.pages.LoginPage;
+import com.threebrowsers.selenium.pages.NavigatePage;
+import org.openqa.selenium.WebDriver;
 
 public class StepsFlow {
 
